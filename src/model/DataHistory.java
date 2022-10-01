@@ -13,20 +13,31 @@ import java.util.ArrayList;
  */
 public class DataHistory {
    
-    private ArrayList<Data> history;
+    private ArrayList<Employee> history;
     
     public DataHistory(){
         
-        this.history = new ArrayList<Data>();
+        this.history = new ArrayList<Employee>();
         
     }
 
-    public ArrayList<Data> getHistory() {
+    public ArrayList<Employee> getHistory() {
         return history;
     }
 
-    public void setHistory(ArrayList<Data> history) {
+    public void setHistory(ArrayList<Employee> history) {
         this.history = history;
     }
-    
+  public Employee addNewEmployee(){
+
+Employee newEmployee = new Employee();
+history.add(newEmployee);
+return newEmployee;  
+}
+  
+  public void deleteEmployee(Employee ep){
+      history.remove(ep);
+  }
+
+
 }

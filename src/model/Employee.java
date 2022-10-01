@@ -4,22 +4,25 @@
  * and open the template in the editor.
  */
 package model;
-
 /**
  *
  * @author LENOVO
  */
 public class Employee {
+
+    public static void setName() {
+       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     private String name;
     private String Employee_ID;
-    private String Age;
+    private int Age;
     private String Gender;
     private String Start_Date;
     private String Level;
     private String Team_info;
     private String position_title;
-    private String phone_number;
+    private int phone_number;
     private String email_address;
 
     public String getName() {
@@ -38,11 +41,11 @@ public class Employee {
         this.Employee_ID = Employee_ID;
     }
 
-    public String getAge() {
+    public int getAge() {
         return Age;
     }
 
-    public void setAge(String Age) {
+    public void setAge(int Age) {
         this.Age = Age;
     }
 
@@ -86,11 +89,11 @@ public class Employee {
         this.position_title = position_title;
     }
 
-    public String getPhone_number() {
+    public int getPhone_number() {
         return phone_number;
     }
 
-    public void setPhone_number(String phone_number) {
+    public void setPhone_number(int phone_number) {
         this.phone_number = phone_number;
     }
 
@@ -100,6 +103,12 @@ public class Employee {
 
     public void setEmail_address(String email_address) {
         this.email_address = email_address;
+    }
+    
+    
+    @Override
+    public String toString(){
+        return Team_info;
     }
     
     
