@@ -53,6 +53,11 @@ public class MainJframe extends javax.swing.JFrame {
         });
 
         btnView.setText("View");
+        btnView.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnViewMouseClicked(evt);
+            }
+        });
         btnView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnViewActionPerformed(evt);
@@ -121,6 +126,11 @@ public class MainJframe extends javax.swing.JFrame {
         CreateJPanel createjpanel=new CreateJPanel(history);
         splitPane.setRightComponent(createjpanel);
     }//GEN-LAST:event_btnCreateActionPerformed
+
+    private void btnViewMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnViewMouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_btnViewMouseClicked
 
     /**
      * @param args the command line arguments

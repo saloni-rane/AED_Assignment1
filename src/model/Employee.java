@@ -24,6 +24,16 @@ public class Employee {
     private String position_title;
     private int phone_number;
     private String email_address;
+    private String Image;
+
+    public String getImage() {
+        return Image;
+    }
+
+    public void setImage(String Image) {
+        this.Image = Image;
+    }
+    
 
     public String getName() {
         return name;
