@@ -118,7 +118,7 @@ public class Employee {
     
     @Override
     public String toString(){
-        return Team_info;
+        return name;
     }
     
     

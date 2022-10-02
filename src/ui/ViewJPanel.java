@@ -89,15 +89,20 @@ public class ViewJPanel extends javax.swing.JPanel {
         photolbl = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(204, 204, 204));
+        setBackground(new java.awt.Color(90, 153, 148));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblTitle.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTitle.setText("View Employee");
-        add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 6, 1351, -1));
+        add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(-130, 10, 1351, -1));
 
+        tblEmployee.setBackground(new java.awt.Color(204, 204, 204));
+        tblEmployee.setBorder(new javax.swing.border.MatteBorder(null));
+        tblEmployee.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
         tblEmployee.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null, null},
@@ -111,122 +116,123 @@ public class ViewJPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tblEmployee);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 1340, 90));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 1010, 90));
 
         lblContact.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         lblContact.setText("Contact info:");
-        add(lblContact, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 413, -1, -1));
+        add(lblContact, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 410, -1, -1));
 
         txtPhoneNumber.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtPhoneNumberActionPerformed(evt);
             }
         });
-        add(txtPhoneNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(153, 439, 188, -1));
+        add(txtPhoneNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 430, 270, -1));
 
         lblPhoneNumber.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
         lblPhoneNumber.setText("phone number:");
-        add(lblPhoneNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 442, -1, -1));
+        add(lblPhoneNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 430, -1, 20));
 
         lblEmailAddress.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
         lblEmailAddress.setText("email address:");
-        add(lblEmailAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 468, 83, -1));
+        add(lblEmailAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 460, 83, -1));
 
         txtPositionTitle1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtPositionTitle1ActionPerformed(evt);
             }
         });
-        add(txtPositionTitle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(128, 375, 188, -1));
+        add(txtPositionTitle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 370, 300, -1));
 
         txtEmpID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtEmpIDActionPerformed(evt);
             }
         });
-        add(txtEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(128, 201, 188, -1));
+        add(txtEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 190, 300, -1));
 
         txtName1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtName1ActionPerformed(evt);
             }
         });
-        add(txtName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(128, 175, 188, -1));
+        add(txtName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 160, 300, -1));
 
         txtGender.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtGenderActionPerformed(evt);
             }
         });
-        add(txtGender, new org.netbeans.lib.awtextra.AbsoluteConstraints(128, 253, 188, -1));
+        add(txtGender, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 250, 300, -1));
 
         txtStartDate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtStartDateActionPerformed(evt);
             }
         });
-        add(txtStartDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(128, 285, 188, -1));
+        add(txtStartDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 280, 300, -1));
 
         textAge.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textAgeActionPerformed(evt);
             }
         });
-        add(textAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(128, 227, 188, -1));
+        add(textAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 220, 300, -1));
 
         txtEmailAddress.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtEmailAddressActionPerformed(evt);
             }
         });
-        add(txtEmailAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(153, 465, 188, -1));
+        add(txtEmailAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 460, 270, -1));
 
         lblName.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         lblName.setText("Name:");
-        add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 177, -1, -1));
+        add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 160, 50, -1));
 
         lblEmpID.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         lblEmpID.setText("Emp ID:");
-        add(lblEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 203, -1, -1));
+        add(lblEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 190, -1, -1));
 
         lblAge.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         lblAge.setText("Age:");
-        add(lblAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 229, 36, -1));
+        add(lblAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 220, 50, -1));
 
         lblGender.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         lblGender.setText("Start Date:");
-        add(lblGender, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 287, -1, -1));
+        add(lblGender, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 280, -1, -1));
 
         lblStartDate.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         lblStartDate.setText("Gender:");
-        add(lblStartDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 255, -1, -1));
+        add(lblStartDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 250, -1, -1));
 
         lblLevel.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         lblLevel.setText("Level:");
-        add(lblLevel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 319, -1, -1));
+        add(lblLevel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 310, 50, -1));
 
         lblTeamInfo.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         lblTeamInfo.setText("Team info:");
-        add(lblTeamInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 345, -1, -1));
+        add(lblTeamInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 340, -1, -1));
 
         txtLevel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtLevelActionPerformed(evt);
             }
         });
-        add(txtLevel, new org.netbeans.lib.awtextra.AbsoluteConstraints(128, 317, 188, -1));
+        add(txtLevel, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 310, 300, -1));
 
         lblPositionTitle.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         lblPositionTitle.setText("Position title:");
-        add(lblPositionTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 377, -1, -1));
+        add(lblPositionTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 370, -1, -1));
 
         txtTeamInfo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtTeamInfoActionPerformed(evt);
             }
         });
-        add(txtTeamInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(128, 343, 188, -1));
+        add(txtTeamInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 340, 300, -1));
 
+        btnView.setBackground(new java.awt.Color(255, 255, 255));
         btnView.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         btnView.setText("View");
         btnView.addActionListener(new java.awt.event.ActionListener() {
@@ -234,8 +240,9 @@ public class ViewJPanel extends javax.swing.JPanel {
                 btnViewActionPerformed(evt);
             }
         });
-        add(btnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(464, 140, 70, -1));
+        add(btnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 420, 90, -1));
 
+        btnDelete.setBackground(new java.awt.Color(255, 255, 255));
         btnDelete.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         btnDelete.setText("Delete");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
@@ -243,8 +250,9 @@ public class ViewJPanel extends javax.swing.JPanel {
                 btnDeleteActionPerformed(evt);
             }
         });
-        add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 140, -1, -1));
+        add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 420, -1, -1));
 
+        btnUpdate.setBackground(new java.awt.Color(255, 255, 255));
         btnUpdate.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         btnUpdate.setText("Update");
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
@@ -252,23 +260,29 @@ public class ViewJPanel extends javax.swing.JPanel {
                 btnUpdateActionPerformed(evt);
             }
         });
-        add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 140, -1, -1));
+        add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 420, -1, -1));
 
         lblPhoto.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         lblPhoto.setText("Photo:");
-        add(lblPhoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 496, -1, -1));
-        add(photolbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(128, 496, 161, 147));
+        add(lblPhoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 500, -1, -1));
+        add(photolbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 490, 130, 110));
 
-        jLabel1.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
         jLabel1.setText("  Search :");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(461, 203, 60, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 100, -1));
 
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
             }
         });
-        add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(531, 201, 145, -1));
+        add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 160, 145, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/search23.jpg"))); // NOI18N
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 320, 540));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/updateimagee.png"))); // NOI18N
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 160, 350, 310));
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtPhoneNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPhoneNumberActionPerformed
@@ -378,24 +392,29 @@ public class ViewJPanel extends javax.swing.JPanel {
         
         
         DefaultTableModel model = (DefaultTableModel) tblEmployee.getModel();
+        Employee emp = (Employee) model.getValueAt(selectedRowIndex, 0);
+        
+        
+        
         
         if (selectedRowIndex>=0) {
             
-            model.setValueAt(txtName1.getText(),selectedRowIndex,0);
-            model.setValueAt(txtEmpID.getText(),selectedRowIndex,1);
-            model.setValueAt(textAge.getText(),selectedRowIndex,2);
-            model.setValueAt(txtGender.getText(),selectedRowIndex,3);
-            model.setValueAt(txtStartDate.getText(),selectedRowIndex,4);
-            model.setValueAt(txtLevel.getText(),selectedRowIndex,5);
-            model.setValueAt(txtTeamInfo.getText(),selectedRowIndex,6);
-            model.setValueAt(txtPositionTitle1.getText(),selectedRowIndex,7);
-            model.setValueAt( txtPhoneNumber.getText(),selectedRowIndex,8);
-            model.setValueAt(txtEmailAddress.getText(),selectedRowIndex,9);
+            emp.setName(txtName1.getText());
+            emp.setEmployee_ID(txtEmpID.getText());
+            emp.setAge(Integer.parseInt(textAge.getText()));
+            emp.setGender(txtGender.getText());
+            emp.setStart_Date(txtStartDate.getText());
+            emp.setLevel(txtLevel.getText());
+            emp.setTeam_info(txtTeamInfo.getText());
+            emp.setTeam_info(txtPositionTitle1.getText());
+            emp.setPhone_number(Integer.parseInt (txtPhoneNumber.getText()));
+            emp.setEmail_address(txtEmailAddress.getText());
 
         
         }
          
         JOptionPane.showMessageDialog(this, "Employee Information Updated");
+        populateTable();
     }//GEN-LAST:event_btnUpdateActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
@@ -412,6 +431,8 @@ public class ViewJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnUpdate;
     private javax.swing.JButton btnView;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel lblAge;
