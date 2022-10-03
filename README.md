@@ -17,9 +17,4 @@ Following fields are given for the Employee profile:
 - email address 
 - Photo 
 
- Validations are given for the following fields for the Employee
--Age- Cannot be negative & Between 18 to 99
-- Start Date - Should be in the format mm/dd/yyyy
--Email Adress- in standard form as abc@gmail.com
-
- Photo can be viewed of selected Employee on the View Interface
+ Validations are given for the above mentioned fields for the Employee profile validity. Also, Photo can be viewed of selected Employee on the View Interface
