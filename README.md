@@ -13,8 +13,8 @@ Following fields are given for the Employee profile:
 - Team info 
 - Position title 
 - Contact Info 
-- Cell phone number (int)
--email address 
+- Pone number (int)
+- email address 
 - Photo 
 
  Validations are given for the following fields for the Employee
