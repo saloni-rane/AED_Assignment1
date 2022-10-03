@@ -13,7 +13,7 @@ Following fields are given for the Employee profile:
 - Team info 
 - Position title 
 - Contact Info 
-- Pone number (int)
+- Phone number (int)
 - email address 
 - Photo 
 
