@@ -24,6 +24,26 @@ public class Person {
     private String Address;
     private int Zip_Code;
     private int House_Number;
+    Housing housing;
+    
+    
+    public Person(String Role,String FName,
+            String LName, String Email, int Age, String Gender,int UniqueId,
+            String Password,Housing housing,int ZipCode )
+    {
+        this.Member = Role;
+        this.First_Name = FName;
+        this.Last_Name = LName;
+        this.Email = Email;
+        this.Age = Age;
+        this.Gender = Gender;
+        this.Primary_ID = UniqueId;
+        this.password = Password;
+        this.housing = housing;
+        this.Zip_Code = ZipCode;   
+        
+    
+    }
 
     public String getMember() {
         return Member;
@@ -133,5 +153,9 @@ public class Person {
     public String toString(){
         
         return Member;
+    }
+
+    public Object getHousing() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

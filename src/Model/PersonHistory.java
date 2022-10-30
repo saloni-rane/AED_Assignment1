@@ -31,8 +31,8 @@ public class PersonHistory {
     }
     
     public Person addNewPerson(){
-        
-        Person newRecord = new Person();
+        Housing housing = new Housing();
+        Person newRecord = new Person("","","","",0,"",0,"",housing,0);
         personhistory.add(newRecord);
         return newRecord;
         
@@ -50,11 +50,5 @@ public class PersonHistory {
     
     
     
-    public Person updateNewRecord(){
-        
-        Person updateRecord = new Person();
-        personhistory.replaceAll((UnaryOperator<Person>) updateRecord);
-        return updateRecord;
-        
-    }
+    
 }

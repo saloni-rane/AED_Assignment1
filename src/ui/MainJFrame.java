@@ -1,21 +1,25 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ui;
+
+import Model.PersonHistory;
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ */
 
 /**
  *
- * @author LENOVO
+ * @author rutuj
  */
 public class MainJFrame extends javax.swing.JFrame {
 
     /**
      * Creates new form MainJFrame
      */
-    public MainJFrame() {
+    PersonHistory personHistory;
+    public MainJFrame(PersonHistory personHistory) {
         initComponents();
+        this.personHistory = personHistory;
     }
 
     /**
@@ -27,189 +31,138 @@ public class MainJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jSeparator1 = new javax.swing.JSeparator();
-        jPanel2 = new javax.swing.JPanel();
-        loginlabel = new javax.swing.JLabel();
-        btnhospital = new javax.swing.JButton();
-        btnpatient = new javax.swing.JButton();
-        btnsystem = new javax.swing.JButton();
-        btncommunity = new javax.swing.JButton();
-        btndoctor = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        BtnSystem = new javax.swing.JButton();
+        BtnHospital = new javax.swing.JButton();
+        BtnCommunity = new javax.swing.JButton();
+        BtnDoctor = new javax.swing.JButton();
+        BtnPatient = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel2.setVerifyInputWhenFocusTarget(false);
-        jPanel2.setLayout(null);
-
-        loginlabel.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
-        loginlabel.setText("Login as a :");
-        jPanel2.add(loginlabel);
-        loginlabel.setBounds(270, 140, 120, 20);
-
-        btnhospital.setBackground(new java.awt.Color(204, 204, 255));
-        btnhospital.setForeground(new java.awt.Color(0, 51, 255));
-        btnhospital.setText("Hospital");
-        btnhospital.addActionListener(new java.awt.event.ActionListener() {
+        BtnSystem.setText("System Admin");
+        BtnSystem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnhospitalActionPerformed(evt);
+                BtnSystemActionPerformed(evt);
             }
         });
-        jPanel2.add(btnhospital);
-        btnhospital.setBounds(440, 140, 80, 23);
 
-        btnpatient.setBackground(new java.awt.Color(204, 204, 255));
-        btnpatient.setForeground(new java.awt.Color(0, 51, 255));
-        btnpatient.setText("Patient");
-        btnpatient.addActionListener(new java.awt.event.ActionListener() {
+        BtnHospital.setText("Hospital");
+        BtnHospital.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnpatientActionPerformed(evt);
+                BtnHospitalActionPerformed(evt);
             }
         });
-        jPanel2.add(btnpatient);
-        btnpatient.setBounds(437, 290, 80, 23);
 
-        btnsystem.setBackground(new java.awt.Color(204, 204, 255));
-        btnsystem.setForeground(new java.awt.Color(0, 0, 255));
-        btnsystem.setText("System");
-        btnsystem.addActionListener(new java.awt.event.ActionListener() {
+        BtnCommunity.setText("Community");
+        BtnCommunity.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnsystemActionPerformed(evt);
+                BtnCommunityActionPerformed(evt);
             }
         });
-        jPanel2.add(btnsystem);
-        btnsystem.setBounds(440, 190, 80, 23);
 
-        btncommunity.setBackground(new java.awt.Color(204, 204, 255));
-        btncommunity.setForeground(new java.awt.Color(0, 51, 255));
-        btncommunity.setText("Community");
-        btncommunity.addActionListener(new java.awt.event.ActionListener() {
+        BtnDoctor.setText("Doctor");
+        BtnDoctor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btncommunityActionPerformed(evt);
+                BtnDoctorActionPerformed(evt);
             }
         });
-        jPanel2.add(btncommunity);
-        btncommunity.setBounds(440, 340, 90, 23);
 
-        btndoctor.setBackground(new java.awt.Color(204, 204, 255));
-        btndoctor.setForeground(new java.awt.Color(0, 51, 255));
-        btndoctor.setText("Doctor");
-        btndoctor.addActionListener(new java.awt.event.ActionListener() {
+        BtnPatient.setText("Patient");
+        BtnPatient.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btndoctorActionPerformed(evt);
+                BtnPatientActionPerformed(evt);
             }
         });
-        jPanel2.add(btndoctor);
-        btndoctor.setBounds(435, 240, 80, 23);
 
-        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel1.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
-        jLabel1.setText("Hospital Management System");
-        jPanel2.add(jLabel1);
-        jLabel1.setBounds(250, 50, 370, 60);
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/mha1.jpg"))); // NOI18N
-        jPanel2.add(jLabel2);
-        jLabel2.setBounds(-10, 0, 760, 490);
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(BtnSystem, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
+                    .addComponent(BtnHospital, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(BtnCommunity, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(BtnDoctor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(BtnPatient, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(678, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(185, Short.MAX_VALUE)
+                .addComponent(BtnSystem)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(BtnHospital)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(BtnCommunity)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(BtnDoctor)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(BtnPatient)
+                .addGap(149, 149, 149))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, 0)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnpatientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnpatientActionPerformed
-        // TODO add your handling code here:
-        PatientLoginForm PF = new PatientLoginForm();
-        PF.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_btnpatientActionPerformed
-
-    private void btnhospitalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnhospitalActionPerformed
+    private void BtnHospitalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnHospitalActionPerformed
         // TODO add your handling code here:
         HospitalLoginForm HF = new HospitalLoginForm();
         HF.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_btnhospitalActionPerformed
+    }//GEN-LAST:event_BtnHospitalActionPerformed
 
-    private void btnsystemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsystemActionPerformed
-        // TODO add your handling code here:
-        SystemAdminLoginForm SF = new SystemAdminLoginForm();
-        SF.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_btnsystemActionPerformed
-
-    private void btncommunityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncommunityActionPerformed
+    private void BtnCommunityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCommunityActionPerformed
         // TODO add your handling code here:
         CommunityLoginForm CF = new CommunityLoginForm();
         CF.setVisible(true);
         this.dispose();
-       
-    }//GEN-LAST:event_btncommunityActionPerformed
+    }//GEN-LAST:event_BtnCommunityActionPerformed
 
-    private void btndoctorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndoctorActionPerformed
+    private void BtnPatientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnPatientActionPerformed
         // TODO add your handling code here:
-       DoctorLoginForm DF = new DoctorLoginForm();
+        PatientLoginForm PF = new PatientLoginForm();
+        PF.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_BtnPatientActionPerformed
+
+    private void BtnDoctorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnDoctorActionPerformed
+        // TODO add your handling code here:
+        DoctorLoginForm DF = new DoctorLoginForm(personHistory);
         DF.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_btndoctorActionPerformed
+        
+    }//GEN-LAST:event_BtnDoctorActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MainJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MainJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MainJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MainJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    private void BtnSystemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSystemActionPerformed
+        // TODO add your handling code here:
+        SystemLoginForm SF = new SystemLoginForm();
+        SF.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_BtnSystemActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new MainJFrame().setVisible(true);
-            }
-        });
-    }
+ 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btncommunity;
-    private javax.swing.JButton btndoctor;
-    private javax.swing.JButton btnhospital;
-    private javax.swing.JButton btnpatient;
-    private javax.swing.JButton btnsystem;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JLabel loginlabel;
+    private javax.swing.JButton BtnCommunity;
+    private javax.swing.JButton BtnDoctor;
+    private javax.swing.JButton BtnHospital;
+    private javax.swing.JButton BtnPatient;
+    private javax.swing.JButton BtnSystem;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
