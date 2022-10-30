@@ -1,25 +1,29 @@
-package ui;
-
-import Model.PersonHistory;
-
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
+package ui;
+
+import Model.CreatePerson;
+import Model.CreatePersonHistory;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author rutuj
+ * @author LENOVO
  */
 public class MainJFrame extends javax.swing.JFrame {
 
     /**
      * Creates new form MainJFrame
      */
-    PersonHistory personHistory;
-    public MainJFrame(PersonHistory personHistory) {
+     CreatePersonHistory createPersonHistory;
+
+
+    public MainJFrame(CreatePersonHistory createPersonHistory) {
         initComponents();
-        this.personHistory = personHistory;
+        this.createPersonHistory = createPersonHistory;
+
     }
 
     /**
@@ -32,78 +36,72 @@ public class MainJFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        BtnSystem = new javax.swing.JButton();
-        BtnHospital = new javax.swing.JButton();
-        BtnCommunity = new javax.swing.JButton();
-        BtnDoctor = new javax.swing.JButton();
-        BtnPatient = new javax.swing.JButton();
+        SystemAdminBtn = new javax.swing.JButton();
+        HospAdminBtn = new javax.swing.JButton();
+        CommAdminBtn = new javax.swing.JButton();
+        DoctorBtn = new javax.swing.JButton();
+        PatientBtn = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1309, 720));
+        setSize(new java.awt.Dimension(1309, 720));
 
-        BtnSystem.setText("System Admin");
-        BtnSystem.addActionListener(new java.awt.event.ActionListener() {
+        jPanel1.setLayout(null);
+
+        SystemAdminBtn.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
+        SystemAdminBtn.setText("System Admin");
+        SystemAdminBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnSystemActionPerformed(evt);
+                SystemAdminBtnActionPerformed(evt);
             }
         });
+        jPanel1.add(SystemAdminBtn);
+        SystemAdminBtn.setBounds(160, 460, 200, 36);
 
-        BtnHospital.setText("Hospital");
-        BtnHospital.addActionListener(new java.awt.event.ActionListener() {
+        HospAdminBtn.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
+        HospAdminBtn.setText("Hospital Admin");
+        HospAdminBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnHospitalActionPerformed(evt);
+                HospAdminBtnActionPerformed(evt);
             }
         });
+        jPanel1.add(HospAdminBtn);
+        HospAdminBtn.setBounds(390, 460, 210, 36);
 
-        BtnCommunity.setText("Community");
-        BtnCommunity.addActionListener(new java.awt.event.ActionListener() {
+        CommAdminBtn.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
+        CommAdminBtn.setText("Community Admin");
+        CommAdminBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnCommunityActionPerformed(evt);
+                CommAdminBtnActionPerformed(evt);
             }
         });
+        jPanel1.add(CommAdminBtn);
+        CommAdminBtn.setBounds(630, 460, 250, 36);
 
-        BtnDoctor.setText("Doctor");
-        BtnDoctor.addActionListener(new java.awt.event.ActionListener() {
+        DoctorBtn.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
+        DoctorBtn.setText("Doctor");
+        DoctorBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnDoctorActionPerformed(evt);
+                DoctorBtnActionPerformed(evt);
             }
         });
+        jPanel1.add(DoctorBtn);
+        DoctorBtn.setBounds(920, 460, 109, 36);
 
-        BtnPatient.setText("Patient");
-        BtnPatient.addActionListener(new java.awt.event.ActionListener() {
+        PatientBtn.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
+        PatientBtn.setText("Patient");
+        PatientBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnPatientActionPerformed(evt);
+                PatientBtnActionPerformed(evt);
             }
         });
+        jPanel1.add(PatientBtn);
+        PatientBtn.setBounds(1070, 460, 110, 36);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(BtnSystem, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
-                    .addComponent(BtnHospital, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(BtnCommunity, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(BtnDoctor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(BtnPatient, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(678, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(185, Short.MAX_VALUE)
-                .addComponent(BtnSystem)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(BtnHospital)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(BtnCommunity)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(BtnDoctor)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(BtnPatient)
-                .addGap(149, 149, 149))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon("/Users/chaitanya/Desktop/Hospital Management System/build/classes/hmbackground.png")); // NOI18N
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(0, 0, 1309, 720);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -117,52 +115,60 @@ public class MainJFrame extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BtnHospitalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnHospitalActionPerformed
+    private void SystemAdminBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SystemAdminBtnActionPerformed
         // TODO add your handling code here:
-        HospitalLoginForm HF = new HospitalLoginForm();
-        HF.setVisible(true);
+        SystemAdminLoginForm SA = new SystemAdminLoginForm(createPersonHistory);
+        SA.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_BtnHospitalActionPerformed
+        
+    }//GEN-LAST:event_SystemAdminBtnActionPerformed
 
-    private void BtnCommunityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCommunityActionPerformed
+    private void HospAdminBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HospAdminBtnActionPerformed
         // TODO add your handling code here:
-        CommunityLoginForm CF = new CommunityLoginForm();
-        CF.setVisible(true);
+        HospitalAdminLoginForm HA = new HospitalAdminLoginForm();
+        HA.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_BtnCommunityActionPerformed
+        
+    }//GEN-LAST:event_HospAdminBtnActionPerformed
 
-    private void BtnPatientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnPatientActionPerformed
+    private void CommAdminBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CommAdminBtnActionPerformed
+        // TODO add your handling code here:
+        CommunityAdminLoginForm CA = new CommunityAdminLoginForm();
+        CA.setVisible(true);
+        this.dispose();
+        
+    }//GEN-LAST:event_CommAdminBtnActionPerformed
+
+    private void DoctorBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DoctorBtnActionPerformed
+        // TODO add your handling code here:
+        DoctorLoginForm DF = new DoctorLoginForm(createPersonHistory);
+        DF.setVisible(true);
+        this.dispose();
+        
+    }//GEN-LAST:event_DoctorBtnActionPerformed
+
+    private void PatientBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PatientBtnActionPerformed
         // TODO add your handling code here:
         PatientLoginForm PF = new PatientLoginForm();
         PF.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_BtnPatientActionPerformed
-
-    private void BtnDoctorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnDoctorActionPerformed
-        // TODO add your handling code here:
-        DoctorLoginForm DF = new DoctorLoginForm(personHistory);
-        DF.setVisible(true);
-        this.dispose();
         
-    }//GEN-LAST:event_BtnDoctorActionPerformed
+    }//GEN-LAST:event_PatientBtnActionPerformed
 
-    private void BtnSystemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSystemActionPerformed
-        // TODO add your handling code here:
-        SystemLoginForm SF = new SystemLoginForm();
-        SF.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_BtnSystemActionPerformed
-
- 
+    
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BtnCommunity;
-    private javax.swing.JButton BtnDoctor;
-    private javax.swing.JButton BtnHospital;
-    private javax.swing.JButton BtnPatient;
-    private javax.swing.JButton BtnSystem;
+    private javax.swing.JButton CommAdminBtn;
+    private javax.swing.JButton DoctorBtn;
+    private javax.swing.JButton HospAdminBtn;
+    private javax.swing.JButton PatientBtn;
+    private javax.swing.JButton SystemAdminBtn;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

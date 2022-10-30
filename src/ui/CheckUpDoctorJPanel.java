@@ -4,24 +4,24 @@
  */
 package ui;
 
-import Model.Person;
-import Model.PersonHistory;
+import Model.CreatePerson;
+import Model.CreatePersonHistory;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author rutuj
+ * @author LENOVO
  */
 public class CheckUpDoctorJPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form CheckUpDoctorJPanel
      */
-    PersonHistory personHistory;
-    public CheckUpDoctorJPanel(PersonHistory createPersonHistory) {
+    CreatePersonHistory createPersonHistory;
+    public CheckUpDoctorJPanel(CreatePersonHistory createPersonHistory) {
         initComponents();
-        this.personHistory = createPersonHistory;
+        this.createPersonHistory = createPersonHistory;
     }
 
     /**
@@ -336,21 +336,21 @@ public class CheckUpDoctorJPanel extends javax.swing.JPanel {
         //btnSave.setVisible(false);
         DefaultTableModel model=(DefaultTableModel) PersonTable.getModel();
         model.setRowCount(0);
-        for(Person p : personHistory.getHistory()){
+        for(CreatePerson e : createPersonHistory.getHistory()){
             
             Object[] row =new Object[12];
-            row[0]=p;
-            row[1]=p.getFirst_Name() ;
-            row[2]=p.getLast_Name();
-            row[3]=p.getAge(); 
-            row[4]=p.getEmail(); 
-            row[5]=p.getPrimary_ID();
-            row[6]=p.getPassword();
-            row[7]=p.getGender() ;
-            row[8]=p.getHousing().getCityname();
-            row[9]=p.getHousing().getCommunityName(); 
-            row[10]=p.getHousing().getHouseNumber(); 
-            row[11]=p.getZip_Code();
+            row[0]=e;
+            row[1]=e.getFName() ;
+            row[2]=e.getLName();
+            row[3]= e.getAge(); 
+            row[4]=e.getEmail(); 
+            row[5]=e.getUniqueId();
+            row[6]=e.getPassword();
+            row[7]=e.getGender() ;
+            row[8]=e.getHousing().getCityname();
+            row[9]= e.getHousing().getCommunityName(); 
+            row[10]=e.getHousing().getHouseNo(); 
+            row[11]=e.getZipCode();
             
             model.addRow(row);
             

@@ -4,24 +4,24 @@
  */
 package ui;
 
-import Model.Person;
-import Model.PersonHistory;
+import Model.CreatePerson;
+import Model.CreatePersonHistory;
 import javax.swing.JOptionPane;
 
 /**
  *
- * @author rutuj
+ * @author LENOVO
  */
 public class DoctorLoginForm extends javax.swing.JFrame {
 
     /**
      * Creates new form DoctorLoginForm
      */
-    PersonHistory personHistory;
-    public DoctorLoginForm(PersonHistory personHistory) {
+    CreatePersonHistory createPersonHistory;
+    public DoctorLoginForm(CreatePersonHistory createPersonHistory) {
         initComponents();
         
-        this.personHistory = personHistory;
+        this.createPersonHistory = createPersonHistory;
         
     }
     
@@ -146,7 +146,7 @@ public class DoctorLoginForm extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        MainJFrame MF = new MainJFrame(personHistory);
+        MainJFrame MF = new MainJFrame(createPersonHistory);
         MF.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -156,7 +156,7 @@ public class DoctorLoginForm extends javax.swing.JFrame {
         
 
         
-         DoctorActionsForm SAAF = new DoctorActionsForm(personHistory);
+         DoctorActionsForm SAAF = new DoctorActionsForm(createPersonHistory);
          SAAF.setVisible(true);
          this.dispose();
         

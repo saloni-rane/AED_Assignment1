@@ -7,7 +7,7 @@ package Model;
 
 /**
  *
- * @author rutuj
+ * @author LENOVO
  */
 public class Housing {
     private int houseNo;
